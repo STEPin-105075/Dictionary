@@ -5,7 +5,6 @@
 #define PROJECT_NAME "Dictionary"
 
 /* Prototypes for all the test functions */
-void test_do_selectionpage(void);
 void test_do_exita(void);
 
 
@@ -19,7 +18,6 @@ int main() {
 /* Note: Do not edit END */
 
 /* Add your test functions in this format for testing*/
-  CU_add_test(suite, "Dictionary", test_do_selectionpage);
   CU_add_test(suite, "Dictionary", test_do_exita);
 
 
@@ -37,9 +35,6 @@ int main() {
   return 0;
 }
 /* Write all the test functions */
-void test_do_selectionpage(void){
-  CU_ASSERT_EQUAL(1,selectionpage());
-}
 void test_do_exita(void){
   CU_ASSERT_EQUAL(0,exita());
 }
