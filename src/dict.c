@@ -28,7 +28,7 @@ void lookup()
 		else
 		{
 		    printf("\n%-15s\t%-15s\n","WORD","MEANING");
-			while(fscanf(data,"%d",a[w].word) != EOF) //used %d instead of %s coz of invalid conversion from char to int
+			while(fscanf(data,"%hhd",a[w].word) != EOF) //used %d instead of %s coz of invalid conversion from char to int
 			{
 				fscanf(data,"%s\t%[^\n]s", a[w].word, a[w].mean);
 				if(strcmp(a[w].word,s)==0)
@@ -43,7 +43,7 @@ void lookup()
 	while(getchar()=='y');
 }
 
-void selectionpage()
+int selectionpage()
 {
     int choice;
     while(1)
@@ -61,7 +61,7 @@ void selectionpage()
                     printf("Please Enter a valid input");
                     delay(1000);
                 }
-        }
+        }return 1;
 }
 int exita()
       {

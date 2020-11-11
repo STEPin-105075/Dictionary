@@ -10,7 +10,7 @@
 
 void delay();
 void lookup();
-void selectionpage();
+int selectionpage();
 void date();
 int exita();
 

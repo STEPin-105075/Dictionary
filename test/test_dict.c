@@ -6,6 +6,7 @@
 
 /* Prototypes for all the test functions */
 void test_do_selectionpage(void);
+void test_do_exita(void);
 
 
 /* Start of the application test */
@@ -19,6 +20,7 @@ int main() {
 
 /* Add your test functions in this format for testing*/
   CU_add_test(suite, "Dictionary", test_do_selectionpage);
+  CU_add_test(suite, "Dictionary", test_do_exita);
 
 
 
@@ -35,8 +37,12 @@ int main() {
   return 0;
 }
 /* Write all the test functions */
-void test_do_selectionpage(void) {
-  CU_ASSERT_EQUAL(1,selectionpage("Enter the word (please make sure that the first letter is capitalised):"));
+void test_do_selectionpage(void){
+  CU_ASSERT_EQUAL(1,selectionpage());
+}
+void test_do_exita(void){
+  CU_ASSERT_EQUAL(0,exita());
+}
+
 
   /* Dummy fail*/
-}
